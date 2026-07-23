@@ -1,0 +1,327 @@
+.header-nav {
+  background-color: white;
+  padding: 14px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.logo-video {
+  color: #e8a020;
+}
+
+.logo-belajar {
+  color: #555;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-kategori {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.nav-kategori:hover {
+  color: #e8a020;
+}
+
+.profile-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #f0f0f0;
+  transition: border-color 0.2s;
+}
+
+.profile-img:hover {
+  border-color: #e8a020;
+}
+
+.profile-wrapper {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  min-width: 160px;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #f5f5f5;
+  transition: background-color 0.15s;
+}
+
+.dropdown-item:hover {
+  background-color: #f9f7f1;
+}
+
+.dropdown-item.keluar {
+  color: #e05252;
+  font-weight: 600;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-item.keluar:hover {
+  background-color: #fff5f5;
+}
+
+.burger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.burger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger-icon span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
+  z-index: 99;
+  position: sticky;
+  top: 68px;
+}
+
+.mobile-menu-item {
+  padding: 14px 20px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.mobile-menu-item:hover {
+  background-color: #f9f7f1;
+}
+
+.mobile-menu-item.keluar {
+  color: #e05252;
+  font-weight: 600;
+}
+
+.chooseMethod {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  justify-content: center;
+  
+}
+
+.method-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: ;
+}
+
+/* Lingkaran step */
+.round {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background: white;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Step aktif — lingkaran hijau filled */
+.method-step.active .round {
+  background: #3cb843;
+  border-color: #3cb843;
+  color: white;
+}
+
+.method-label {
+  font-size: 13px;
+  color: #bbb;
+  white-space: nowrap;
+}
+
+/* Label aktif — teks hitam */
+.method-step.active .method-label {
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+/* Garis penghubung antar step */
+.method-line {
+  width: 80px;
+  height: 1px;
+  background: #ddd;
+  margin: 0 4px;
+}
+
+/* Step yang sudah selesai — lingkaran hijau dengan centang */
+.method-step.done .round {
+  background: #3cb843;
+  border-color: #3cb843;
+  color: white;
+  font-size: 10px;
+}
+
+/* Garis yang sudah dilewati — berwarna hijau */
+.method-line.done {
+  background: #3cb843;
+}
+
+/* Step aktif — lingkaran outline hijau */
+.method-step.active .round {
+  border-color: #3cb843;
+  background: white;
+  color: #3cb843;
+}
+
+.method-step.active .method-label {
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+.desktop-only { display: flex; }
+.mobile-only  { display: none; }
+
+/* Timeline bar di bawah header — khusus mobile */
+.method-bar {
+  background: white;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .desktop-only { display: none !important; }
+  .mobile-only  { display: flex; }
+
+  .burger-btn {
+    display: flex;
+  }
+
+  .mobile-only .method-label {
+  display: inline;  /* ← tampilkan label di method-bar mobile */
+  font-size: 11px;
+  color: #bbb;
+}
+
+.mobile-only .method-step.active .method-label {
+  color: #1a1a2e;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.mobile-only .method-line {
+  width: 40px;
+}
+
+.mobile-only .round {
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+}
+
+  /* Timeline bar di mobile */
+  .method-bar {
+    display: flex;
+    position: sticky;
+    top: 68px;   /* tepat di bawah header */
+    z-index: 99;
+  }
+
+  .burger-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+  .header-nav {
+    padding: 12px 16px;
+    border-bottom: none;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .logo img {
+    width: 32px;
+  }
+
+  .nav-kategori {
+    display: none;
+  }
+
+  .chooseMethod {
+    gap: 4px;
+  }
+ 
+   .method-label {
+    display: none;
+  }
+
+  .method-line {
+    width: 30px;
+  }
+}

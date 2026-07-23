@@ -1,0 +1,52 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 68px);
+  padding: 24px;
+  text-align: center;
+  gap: 12px;
+}
+
+.welcome-container h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+
+.welcome-container p {
+  font-size: 15px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.welcome-container .App-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.welcome-container .divider,
+.welcome-container .btn {
+  width: 100%;
+  max-width: 360px;
+}
+
+.btn-welcome:hover {
+  background-color: #171105;
+}
+
+.btn-welcome {
+  background-color: #e8a020;
+  color: white;
+  border: none;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}

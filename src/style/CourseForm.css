@@ -1,0 +1,123 @@
+.course-form-page {
+  min-height: 100vh;
+  background-color: #f5f2e8;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.course-form-card {
+  background: white;
+  border-radius: 10px;
+  padding: 32px;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  height: fit-content;
+}
+
+.course-form-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3cb843;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-cancel,
+.btn-submit {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.btn-cancel {
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+.btn-cancel:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-submit {
+  background-color: #3cb843;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #33a33a;
+}
+
+.form-error {
+  background-color: #fde8e8;
+  color: #e05252;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+ 
+.btn-submit:disabled,
+.btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+@media (max-width: 600px) {
+  .course-form-card {
+    padding: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

@@ -1,0 +1,78 @@
+.change-page {
+  min-height: 100vh;
+  background-color: #f5f2e8;
+}
+
+.change-body {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 24px;
+  align-items: flex-start;
+}
+
+.change-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.btn-pay {
+  width: 100%;
+  background: #3cb843;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  
+}
+
+.btn-pay:hover {
+  background-color: #33a33a;
+}
+
+
+@media (max-width: 768px) {
+
+  .change-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    margin: 0;
+  }
+
+  .change-main{
+      width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .change-aside{
+    order: -1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    
+  }
+
+  .payCard{
+    order: 2;
+    width: 100%;
+  }
+
+  .UbahMetode{
+    order: 1
+
+
+  }
+}

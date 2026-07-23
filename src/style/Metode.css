@@ -1,0 +1,227 @@
+.payment-card{
+   max-width: 798px;
+   padding: 24px;
+   gap: 36px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+.payment-card h5{
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-style: SemiBold;
+    color: #222325;
+}
+
+.payment-method{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #3A35411F;
+    border-radius: 10px;
+    padding: 36px 18px;
+    margin-bottom: 20px;
+    width: 750px;
+    height: auto;
+}
+.payment-method p{
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    align-items: center;
+    justify-content: center;
+    color: #222325;
+}
+
+.payment-method span{
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.payment-method img{
+    width: 117px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary-card{
+    max-width: 750px;
+    gap: 24px;
+    padding: 12px;
+     height: auto;
+}
+
+.summary-card h2{
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-style: SemiBold;
+    color: #222325;
+}
+
+.summary-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 26px;
+    max-width: 750px;
+}
+
+.summary-text{
+    max-width: 484px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    font-style: Regular;
+    color: #555;
+}
+
+.summary-price{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    font-style: Bold;
+    align-items: center;
+    color: #222325;
+}
+
+.summary-row-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 26px;
+    max-width: 750px;
+}
+
+.summary-row-total h6{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    font-style: Bold;
+    color: #222325;
+}
+
+.summary-total-price{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-style: SemiBold;
+    align-items: center;
+    color: #3ECF4C;
+
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    max-width: 750px;
+    margin-top: 24px;
+}
+
+
+.btn-change{
+    display: flex;
+    max-width: 750px;
+    width: 100%;
+    background-color: white;
+    color: #3ECF4C;
+    align-items: center;
+    transition : ease 0.6s;
+    padding: 12px;
+    border: 1px solid #3ECF4C;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    font-style: Bold;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 6px;
+    text-decoration: none;
+}
+
+
+.btn-change:hover{
+    background-color: #3ECF4C;
+    color: white;
+}
+
+.btn-pay{
+    display: flex;
+    max-width: 750px;
+    width: 100%;
+    background-color: #3ECF4C;
+    color: white;
+    transition : ease 0.6s;
+    padding: 12px;
+    border: 1px solid #3ECF4C;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    font-style: Bold;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+    text-decoration: none;
+}
+
+.btn-pay:hover{
+    background-color: white;
+    color: #3ECF4C;
+}
+
+@media (max-width: 768px) {
+    .payment-card{
+        width: 100%;
+        padding: 12px;
+    }
+    .payment-method{
+        width: 100%;
+    }
+    .summary-card{
+        width: 100%;
+    }
+    .summary-row{
+        width: 100%;
+    }
+    .buttons{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+    }.btn-change{
+        width: 100%;
+    }
+    .btn-pay{
+        width: 100%;
+    }
+
+    
+}

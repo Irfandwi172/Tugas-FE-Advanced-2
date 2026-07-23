@@ -1,0 +1,439 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  margin-right: 4px;
+}
+
+.logo-video {
+  color: #e8a020;
+}
+
+.logo-belajar {
+  color: #444;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 1110px;
+  gap: 50px;
+}
+
+.btn-cat {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  padding: 6px 18px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.btn-cat:hover {
+  border-color: #e8a020;
+  color: #e8a020;
+}
+
+.avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 10%;
+  object-fit: cover;
+  background-color: #e8a020;
+  display: block;
+}
+
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  margin: 40px 200px 40px 200px;
+  border-radius: 10px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 40, 0.72);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  padding: 60px 24px;
+  color: #ffffff;
+}
+
+.hero-content h1 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.btn-hero {
+  display: inline-block;
+  background-color: #22a86e;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 8px;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+}
+
+.btn-hero:hover {
+  background-color: #1a8f5c;
+  transform: translateY(-1px);
+}
+
+.collect {
+  max-width: 1200px;
+  margin: 48px auto;
+  padding: 0 32px;
+}
+
+.collect > h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.collect-sub {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.filter-nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  border-bottom: 2px solid #e8e4da;
+  padding-bottom: 0;
+}
+
+.filter-nav a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  padding: 8px 16px;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.filter-nav a:hover {
+  color: #e8a020;
+}
+
+.filter-nav a.active {
+  color: #e8a020;
+  border-bottom-color: #e8a020;
+}
+
+.newsletter {
+  background-image: url(/Assets/Belajar-Online.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  margin: 40px 200px 40px 200px;
+  border-radius: 10px;
+}
+
+.newsletter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 40, 0.75);
+}
+
+.newsletter-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 64px 32px;
+  color: #fff;
+}
+
+.nl-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #e8a020;
+  margin-bottom: 10px;
+}
+
+.newsletter-inner h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.nl-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.nl-form {
+  display: flex;
+  gap: 0;
+  max-width: 440px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.nl-form input {
+  flex: 1;
+  padding: 12px 18px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  background: #fff;
+  color: #333;
+}
+
+.nl-form input::placeholder {
+  color: #aaa;
+}
+
+.nl-form button {
+  background-color: #e8a020;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.nl-form button:hover {
+  background-color: #c8880e;
+}
+
+/* ===== Tambahan CSS — tempel ke bawah file Home.css yang sudah ada ===== */
+
+.collect-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-add-course {
+  background-color: #3cb843;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.btn-add-course:hover {
+  background-color: #33a33a;
+}
+
+.status-message {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #888;
+}
+ 
+.status-message.error {
+  color: #e05252;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 16px;
+    height: 56px;
+  }
+  .header-right {
+    padding-left: 0;
+    margin-left: auto;
+    gap: 12px;
+  }
+
+  .hero {
+    margin: 16px 16px;
+    min-height: 280px;
+    border-radius: 10px;
+  }
+  .hero-content {
+    padding: 40px 20px;
+  }
+  .hero-content h1 {
+    font-size: 20px;
+  }
+  .hero-content p {
+    font-size: 13px;
+  }
+  .btn-hero {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+
+  .collect {
+    padding: 0 16px;
+    margin: 24px auto;
+  }
+  .collect > h3 {
+    font-size: 18px;
+  }
+
+  .filter-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0;
+    gap: 0;
+  }
+  .filter-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-nav a {
+    white-space: nowrap;
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  .newsletter {
+    margin: 16px 16px;
+    border-radius: 10px;
+  }
+  .newsletter-inner {
+    padding: 40px 20px;
+  }
+  .newsletter-inner h3 {
+    font-size: 20px;
+  }
+  .nl-desc {
+    font-size: 13px;
+  }
+  .nl-form {
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: visible;
+    box-shadow: none;
+    gap: 8px;
+  }
+  .nl-form input {
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .nl-form button {
+    border-radius: 8px;
+    padding: 10px 20px;
+  }
+
+  footer {
+    padding: 32px 16px 0;
+  }
+  .footer-inner {
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 24px;
+  }
+  .footer-brand {
+    flex: none;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .footer-col {
+    min-width: 120px;
+  }
+  .copyright {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 0 20px;
+  }
+
+    .collect-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-add-course {
+    width: 100%;
+  }
+}

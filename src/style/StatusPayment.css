@@ -1,0 +1,73 @@
+.status-payment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 608px;
+    height: auto;
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #3A35411F;
+    padding: 24px 36px 64px 36px;
+}
+
+.status-payment img{
+    max-width: 562px;
+    width: 100%;
+    height: 421px;
+    object-fit: cover;
+}
+
+.status-payment h4{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    font-style: SemiBold;
+    color: #3A3541DE;
+    text-align: center;
+}
+
+.status-payment p{
+    max-width: 563px;
+    height: auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
+    font-style: Regular;
+    color: #3A3541AD;
+    text-align: center;
+}
+
+.status-payment button{
+    width: 215px;
+    height: auto;
+    background-color: #3cb843;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.5s;
+}
+
+.status-payment button:hover{
+    background-color: #aed2b1;
+}
+
+@media (max-width: 768px) {
+    .status-payment{
+        padding: 24px 20px 36px 20px;
+        width: 100%;
+    }
+
+    .status-payment button{
+        width: 100%;
+}
+}

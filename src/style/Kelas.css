@@ -1,0 +1,156 @@
+.kelas-page {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 32px 40px;
+}
+
+.kelas-header {
+  margin-bottom: 24px;
+}
+
+.kelas-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.kelas-header p {
+  font-size: 13px;
+  color: #888;
+}
+
+.kelas-wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 366px;
+  flex-shrink: 0;
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #eee;
+}
+
+/* Konten kanan */
+.kelas-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.toolbar-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.sort-select {
+  padding: 12px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  width: 180px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 12px;
+  gap: 8px;
+  background: white;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  width: 140px;
+}
+.search-box img {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.kelas-grid .card-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.kelas-grid .card {
+  padding: 16px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-top: 32px;
+}
+
+.page-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 13px;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.2s;
+}
+
+.page-btn:hover {
+  border-color: #e8a020;
+  color: #e8a020;
+}
+
+.page-btn.active {
+  background-color: #e8a020;
+  border-color: #e8a020;
+  color: white;
+  font-weight: 700;
+}
+
+.page-btn.arrow {
+  font-size: 12px;
+  color: #888;
+}
+
+.page-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .kelas-page {
+    padding: 16px;
+  }
+
+  .kelas-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .kelas-grid .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .pagination {
+    justify-content: center;
+  }
+}

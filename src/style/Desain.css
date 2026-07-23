@@ -1,0 +1,261 @@
+.breadcrumb-desain {
+  display: flex;
+  justify-content: flex-start;
+  margin: 24px 200px 16px 200px;
+  color: #1a1a2e;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.breadcrumb-desain .breadcrumb {
+  color: rgb(165, 165, 165);
+}
+
+.breadcrumb-desain .judul {
+  color: #1a1a2e;
+  font-weight: 500;
+}
+
+.hero-desain {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+  max-width: 1200px;
+  width: calc(100% - 400px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 200px 0 200px;
+  border-radius: 10px;
+}
+
+.hero-over {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 40, 0.72);
+}
+
+.hero-cont {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  padding: 40px 32px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.hero-cont h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.hero-cont p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.rating-desain {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #e8a020;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.desc-offer {
+  display: flex;
+  align-items: flex-start;
+  margin: 24px 200px;
+  gap: 24px;
+  max-width: 1200px;
+}
+
+.desc-offer aside {
+  order: 2;
+  flex: 0 0 360px;
+  position: sticky;
+  top: 74px;
+}
+
+.desain-main {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  min-width: 0;
+}
+
+.desc-desain {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.desc-desain h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+}
+
+.desc-desain p {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.7;
+}
+
+.tutor,
+.materi,
+.ratingReview {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  width: 100%;
+}
+
+.tutor h5,
+.materi h5,
+.ratingReview h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+}
+
+.tutor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.otherCourse {
+  max-width: 1200px;
+  margin: 40px 200px;
+}
+
+.otherCourse h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+}
+
+.otherCourse h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #3ecf4c;
+  margin-bottom: 4px;
+}
+
+.otherCourse p {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.otherCourse-grid .card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-desain,
+  .hero-desain,
+  .desc-offer,
+  .otherCourse {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: auto;
+    max-width: none;
+  }
+
+  .breadcrumb-desain {
+    margin-top: 16px;
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+
+  .hero-desain {
+    min-height: 240px;
+  }
+
+  .hero-cont {
+    padding: 24px 20px;
+  }
+
+  .hero-cont h1 {
+    font-size: 20px;
+  }
+
+  .hero-cont p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  .desc-offer {
+    flex-direction: column;
+    margin-top: 16px;
+    gap: 16px;
+  }
+
+  .desc-offer aside {
+    order: -1;
+    position: static;
+    width: 100%;
+    flex: none;
+  }
+
+  .desain-main {
+    order: 0;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .desc-desain,
+  .tutor,
+  .materi,
+  .ratingReview {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .desc-desain h2,
+  .tutor h5,
+  .materi h5,
+  .ratingReview h5 {
+    font-size: 16px;
+  }
+
+  .desc-desain p {
+    font-size: 13px;
+  }
+  .tutor-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .otherCourse {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .otherCourse h3 {
+    font-size: 18px;
+  }
+
+  .otherCourse-grid .card-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
