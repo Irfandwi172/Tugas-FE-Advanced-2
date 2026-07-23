@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchStart, fetchSuccess, fetchError } from "../store/redux/courseSlice";
+import {
+  fetchStart,
+  fetchSuccess,
+  fetchError,
+} from "../store/redux/courseSlice";
 import { getCourses } from "../services/api/courseService";
 
 const useFetchCourses = () => {
@@ -8,7 +12,6 @@ const useFetchCourses = () => {
   const { courses, loading, error } = useSelector((state) => state.course);
 
   useEffect(() => {
-    // Hanya fetch kalau data belum ada
     if (courses.length === 0 && !loading) {
       const fetchData = async () => {
         dispatch(fetchStart());

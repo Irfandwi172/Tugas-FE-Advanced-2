@@ -1,7 +1,6 @@
-
 import { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";  // ← hook Redux
+import { useSelector, useDispatch } from "react-redux"; // ← hook Redux
 import {
   fetchStart,
   fetchSuccess,
@@ -11,25 +10,23 @@ import {
 import {
   getCourses,
   deleteCourse as deleteCourseAPI,
-} from "../services/api/courseService";  // ← fungsi API dari services/api
+} from "../services/api/courseService"; // ← fungsi API dari services/api
 import CardCollection from "../components/CardCollection";
 import Footer from "../components/Footer";
 import heroBg from "../assets/Belajar-Online.jpg";
 import "../style/Home.css";
 
 const HomePage = () => {
-  // useSelector — ambil data dari Redux state
   const { courses, loading, error } = useSelector((state) => state.course);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // STEP 4.1 — GET DATA: fetch courses dari API saat komponen pertama dimuat
   useEffect(() => {
     const fetchCourses = async () => {
-      dispatch(fetchStart()); // set loading = true
+      dispatch(fetchStart());
       try {
-        const data = await getCourses(); // panggil GET API dari services/api
-        dispatch(fetchSuccess(data));    // simpan data ke Redux state
+        const data = await getCourses();
+        dispatch(fetchSuccess(data));
       } catch (err) {
         dispatch(fetchError("Gagal mengambil data course."));
       }
@@ -38,12 +35,11 @@ const HomePage = () => {
     fetchCourses();
   }, [dispatch]);
 
-  // STEP 4.3 — DELETE: hapus course lewat API lalu update Redux state
   const handleDelete = async (id) => {
     if (window.confirm("Yakin ingin menghapus course ini?")) {
       try {
-        await deleteCourseAPI(id);       // panggil DELETE API dari services/api
-        dispatch(deleteCourse(id));      // hapus dari Redux state
+        await deleteCourseAPI(id);
+        dispatch(deleteCourse(id));
       } catch {
         alert("Gagal menghapus course. Coba lagi.");
       }
@@ -89,7 +85,9 @@ const HomePage = () => {
         </div>
 
         <nav className="filter-nav">
-          <a href="#" className="active">Semua Kelas</a>
+          <a href="#" className="active">
+            Semua Kelas
+          </a>
           <a href="#">Pemasaran</a>
           <a href="#">Desain</a>
           <a href="#">Pengembangan Diri</a>
@@ -97,7 +95,6 @@ const HomePage = () => {
         </nav>
       </section>
 
-      {/* Tampilkan status loading / error / data */}
       {loading && <p className="status-message">Memuat data course...</p>}
       {error && <p className="status-message error">{error}</p>}
 
@@ -110,7 +107,10 @@ const HomePage = () => {
         />
       )}
 
-      <section className="newsletter" style={{ backgroundImage: `url(${heroBg})` }}>
+      <section
+        className="newsletter"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      >
         <div className="newsletter-inner">
           <p className="nl-label">NEWSLETTER</p>
           <h3>Mau Belajar Lebih Banyak?</h3>

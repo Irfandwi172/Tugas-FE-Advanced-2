@@ -41,38 +41,30 @@ const CourseCard = ({
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </NavLink>
-       <div className="rate-price">
-              <div className="rating">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <span
-                    key={star}
-                    className={`fa fa-star ${
-                      star <= rating ? "checked" : ""
-                    }`}
-                  ></span>
-                ))}
+      <div className="rate-price">
+        <div className="rating">
+          {[1, 2, 3, 4, 5].map((star) => (
+            <span
+              key={star}
+              className={`fa fa-star ${star <= rating ? "checked" : ""}`}
+            ></span>
+          ))}
 
-                <span className="rating-count">
-                  <u>
-                    {rating} ({reviewCount})
-                  </u>
-                </span>
-              </div>
+          <span className="rating-count">
+            <u>
+              {rating} ({reviewCount})
+            </u>
+          </span>
+        </div>
 
-              <h3 className="price">{price}</h3>
-            </div>
-      {/* Tombol aksi berada di luar NavLink */}
+        <h3 className="price">{price}</h3>
+      </div>
       {showActions && (
         <div className="card-actions">
-          <button
-            type="button"
-            className="btn-edit"
-            onClick={() => onEdit(id)}
-          >
+          <button type="button" className="btn-edit" onClick={() => onEdit(id)}>
             ✏️ Edit
           </button>
 
@@ -96,16 +88,12 @@ const CardCollection = ({
   onEdit,
   onDelete,
 }) => {
-  const displayedCourses = limit
-    ? courses.slice(0, limit)
-    : courses;
+  const displayedCourses = limit ? courses.slice(0, limit) : courses;
 
   return (
     <div className="card-grid">
       {displayedCourses.length === 0 ? (
-        <p className="empty-message">
-          Belum ada course tersedia.
-        </p>
+        <p className="empty-message">Belum ada course tersedia.</p>
       ) : (
         displayedCourses.map((course) => (
           <CourseCard

@@ -1,4 +1,4 @@
-import useFetchCourses from "../hooks/useFetchCourses";  // ← tambahkan ini
+import useFetchCourses from "../hooks/useFetchCourses"; // ← tambahkan ini
 import Filter from "../components/Filter";
 import CardCollection from "../components/CardCollection";
 import "../style/Kelas.css";
@@ -8,7 +8,6 @@ import Pagination from "../components/Pagination";
 import search from "../assets/search.png";
 
 const Product = () => {
-  // Ambil courses dari Redux state
   const { courses, loading, error } = useFetchCourses();
 
   return (
@@ -36,11 +35,11 @@ const Product = () => {
               </select>
               <div className="search-box">
                 <input type="text" placeholder="Cari Kelas" />
-                <span><img src={search} /></span>
+                <span>
+                  <img src={search} />
+                </span>
               </div>
             </div>
-
-            {/* Tampilkan status loading / error */}
             {loading && <p className="status-message">Memuat data...</p>}
             {error && <p className="status-message error">{error}</p>}
 
@@ -54,7 +53,7 @@ const Product = () => {
           </div>
         </div>
       </div>
-      <Footer />  {/* ← hapus wrapper <footer> yang dobel */}
+      <Footer />
     </>
   );
 };

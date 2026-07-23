@@ -4,7 +4,11 @@ import { Outlet, NavLink } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import "../style/Header.css";
 
-const Header = ({ showProfile = false, showMethod = false, currentStep = 1 }) => {
+const Header = ({
+  showProfile = false,
+  showMethod = false,
+  currentStep = 1,
+}) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -31,40 +35,47 @@ const Header = ({ showProfile = false, showMethod = false, currentStep = 1 }) =>
             <b>belajar</b>
           </span>
         </div>
-       {showMethod && (
-  <div className="chooseMethod desktop-only">
+        {showMethod && (
+          <div className="chooseMethod desktop-only">
+            <div
+              className={`method-step ${
+                currentStep >= 1 ? "active" : ""
+              } ${currentStep > 1 ? "done" : ""}`}
+            >
+              <span className="round">{currentStep > 1 ? "✓" : ""}</span>
+              <span className="method-label">Pilih Metode</span>
+            </div>
 
-    {/* Step 1 — Pilih Metode */}
-    <div className={`method-step ${currentStep >= 1 ? "active" : ""} ${currentStep > 1 ? "done" : ""}`}>
-      <span className="round">
-        {currentStep > 1 ? "✓" : ""}
-      </span>
-      <span className="method-label">Pilih Metode</span>
-    </div>
+            <span
+              className={`method-line ${currentStep > 1 ? "done" : ""}`}
+            ></span>
 
-    <span className={`method-line ${currentStep > 1 ? "done" : ""}`}></span>
+            <div
+              className={`method-step ${
+                currentStep >= 2 ? "active" : ""
+              } ${currentStep > 2 ? "done" : ""}`}
+            >
+              <span className="round">{currentStep > 2 ? "✓" : ""}</span>
+              <span className="method-label">Bayar</span>
+            </div>
 
-    {/* Step 2 — Bayar */}
-    <div className={`method-step ${currentStep >= 2 ? "active" : ""} ${currentStep > 2 ? "done" : ""}`}>
-      <span className="round">
-        {currentStep > 2 ? "✓" : ""}
-      </span>
-      <span className="method-label">Bayar</span>
-    </div>
+            <span
+              className={`method-line ${currentStep > 2 ? "done" : ""}`}
+            ></span>
 
-    <span className={`method-line ${currentStep > 2 ? "done" : ""}`}></span>
+            <div className={`method-step ${currentStep >= 3 ? "active" : ""}`}>
+              <span className="round"></span>
+              <span className="method-label">Selesai</span>
+            </div>
+          </div>
+        )}
 
-    {/* Step 3 — Selesai */}
-    <div className={`method-step ${currentStep >= 3 ? "active" : ""}`}>
-      <span className="round"></span>
-      <span className="method-label">Selesai</span>
-    </div>
-
-  </div>
-)}
         {showProfile && (
           <div className="nav-right desktop-only">
-            <NavLink to="/product" className="nav-kategori">Kategori</NavLink>
+            <NavLink to="/product" className="nav-kategori">
+              Kategori
+            </NavLink>
+
             <div className="profile-wrapper" ref={dropdownRef}>
               <img
                 src={orang}
@@ -72,17 +83,21 @@ const Header = ({ showProfile = false, showMethod = false, currentStep = 1 }) =>
                 className="profile-img"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               />
+
               {dropdownOpen && (
                 <div className="dropdown-menu">
                   <NavLink to="/profil" className="dropdown-item">
                     Profil Saya
                   </NavLink>
+
                   <NavLink to="/product" className="dropdown-item">
                     Kelas Saya
                   </NavLink>
+
                   <NavLink to="/pesanan" className="dropdown-item">
                     Pesanan Saya
                   </NavLink>
+
                   <NavLink to="/" className="dropdown-item keluar">
                     Keluar 🚪
                   </NavLink>
@@ -91,7 +106,6 @@ const Header = ({ showProfile = false, showMethod = false, currentStep = 1 }) =>
             </div>
           </div>
         )}
-
         {(showProfile || showMethod) && (
           <button
             className="burger-btn mobile-only"
@@ -106,18 +120,34 @@ const Header = ({ showProfile = false, showMethod = false, currentStep = 1 }) =>
         )}
       </header>
       {showMethod && (
-        <div className="chooseMethod mobile-only method-bar">
-          <div className="method-step active">
-            <span className="round"></span>
+        <div className="method-mobile">
+          <div
+            className={`method-step ${
+              currentStep >= 1 ? "active" : ""
+            } ${currentStep > 1 ? "done" : ""}`}
+          >
+            <span className="round">{currentStep >= 1 ? "✓" : ""}</span>
             <span className="method-label">Pilih Metode</span>
           </div>
-          <span className="method-line"></span>
-          <div className="method-step">
-            <span className="round"></span>
+
+          <span
+            className={`method-line ${currentStep > 1 ? "done" : ""}`}
+          ></span>
+
+          <div
+            className={`method-step ${
+              currentStep >= 2 ? "active" : ""
+            } ${currentStep > 2 ? "done" : ""}`}
+          >
+            <span className="round">{currentStep >= 2 ? "✓" : ""}</span>
             <span className="method-label">Bayar</span>
           </div>
-          <span className="method-line"></span>
-          <div className="method-step">
+
+          <span
+            className={`method-line ${currentStep > 2 ? "done" : ""}`}
+          ></span>
+
+          <div className={`method-step ${currentStep >= 3 ? "active" : ""}`}>
             <span className="round"></span>
             <span className="method-label">Selesai</span>
           </div>
@@ -132,6 +162,7 @@ const Header = ({ showProfile = false, showMethod = false, currentStep = 1 }) =>
           >
             Kategori
           </NavLink>
+
           <NavLink
             to="/profil"
             className="mobile-menu-item"
@@ -139,6 +170,7 @@ const Header = ({ showProfile = false, showMethod = false, currentStep = 1 }) =>
           >
             Profil Saya
           </NavLink>
+
           <NavLink
             to="/product"
             className="mobile-menu-item"
@@ -146,6 +178,7 @@ const Header = ({ showProfile = false, showMethod = false, currentStep = 1 }) =>
           >
             Kelas Saya
           </NavLink>
+
           <NavLink
             to="/pesanan"
             className="mobile-menu-item"
@@ -153,6 +186,7 @@ const Header = ({ showProfile = false, showMethod = false, currentStep = 1 }) =>
           >
             Pesanan Saya
           </NavLink>
+
           <NavLink
             to="/"
             className="mobile-menu-item keluar"

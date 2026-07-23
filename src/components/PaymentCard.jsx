@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from "react";
 import bankBca from "../assets/bank_bca.png";
 import bankBni from "../assets/bni.png";
@@ -13,7 +12,6 @@ import jcb from "../assets/jcb.png";
 import visa from "../assets/visa.png";
 import "../style/PaymentCard.css";
 import { NavLink } from "react-router-dom";
-
 
 const paymentMethods = [
   {
@@ -46,8 +44,8 @@ const paymentMethods = [
     ],
   },
 ];
-const PaymentCard = ({ title, ShowPayButton = true}) => {
-   const [openSection, setOpenSection] = useState("bank");
+const PaymentCard = ({ title, ShowPayButton = true }) => {
+  const [openSection, setOpenSection] = useState("bank");
   const [selectedMethod, setSelectedMethod] = useState("bca");
 
   const toggleSection = (id) => {
@@ -55,57 +53,66 @@ const PaymentCard = ({ title, ShowPayButton = true}) => {
   };
   return (
     <div className="payment-card">
-            <h2>{title}</h2>
+      <h2>{title}</h2>
 
-            {paymentMethods.map((section) => (
-              <div className="payment-section" key={section.id}>
+      {paymentMethods.map((section) => (
+        <div className="payment-section" key={section.id}>
+          <button
+            type="button"
+            className="payment-section-title"
+            onClick={() => toggleSection(section.id)}
+          >
+            <span>{section.title}</span>
+            <span
+              className={`payment-arrow ${openSection === section.id ? "open" : ""}`}
+            >
+              <i className="ti ti-chevron-down"></i>
+            </span>
+          </button>
 
-                <button
-                  type="button"
-                  className="payment-section-title"
-                  onClick={() => toggleSection(section.id)}
-                >
-                  <span>{section.title}</span>
-                  <span className={`payment-arrow ${openSection === section.id ? "open" : ""}`}>
-                    <i className="ti ti-chevron-down"></i>
-                  </span>
-                </button>
+          {openSection === section.id && (
+            <div className="payment-options">
+              {section.options.length === 0 ? (
+                <div className="card-icons">
+                  <span className="card-icon">Mastercard</span>
+                  <span className="card-icon">VISA</span>
+                  <span className="card-icon">JCB</span>
+                </div>
+              ) : (
+                section.options.map((option) => (
+                  <label
+                    key={option.id}
+                    className={`payment-option ${selectedMethod === option.id ? "selected" : ""}`}
+                  >
+                    <div className="payment-option-left">
+                      <img
+                        src={option.icon}
+                        alt={option.label}
+                        className="payment-icon"
+                      />
+                      <span>{option.label}</span>
+                    </div>
+                    <input
+                      type="radio"
+                      name="paymentMethod"
+                      checked={selectedMethod === option.id}
+                      onChange={() => setSelectedMethod(option.id)}
+                    />
+                  </label>
+                ))
+              )}
+            </div>
+          )}
+        </div>
+      ))}
 
-                {openSection === section.id && (
-                  <div className="payment-options">
-                    {section.options.length === 0 ? (
-                      <div className="card-icons">
-                        <span className="card-icon">Mastercard</span>
-                        <span className="card-icon">VISA</span>
-                        <span className="card-icon">JCB</span>
-                      </div>
-                    ) : (
-                      section.options.map((option) => (
-                        <label
-                          key={option.id}
-                          className={`payment-option ${selectedMethod === option.id ? "selected" : ""}`}
-                        >
-                          <div className="payment-option-left">
-                            <img src={option.icon} alt={option.label} className="payment-icon" />
-                            <span>{option.label}</span>
-                          </div>
-                          <input
-                            type="radio"
-                            name="paymentMethod"
-                            checked={selectedMethod === option.id}
-                            onChange={() => setSelectedMethod(option.id)}
-                          />
-                        </label>
-                      ))
-                    )}
-                  </div>
-                )}
-              </div>
-            ))}
+      {ShowPayButton && (
+        <NavLink className="payment-button" to="/pay">
+          Bayar
+        </NavLink>
+      )}
+    </div>
+  );
+};
 
-            {ShowPayButton && <NavLink className="payment-button" to="/pay">Bayar</NavLink>}
-          </div>
-  )
-}
-
-export default PaymentCard
+export default PaymentCard;

@@ -1,4 +1,3 @@
-import React from "react";
 import "../style/Metode.css";
 import iconBCA from "../assets/bank_bca.png";
 import { NavLink } from "react-router-dom";
@@ -8,8 +7,8 @@ const Metode = ({
   showChangeButton = true,
   showTextMethod = true,
   showPayButton = true,
-  payTo = "/pay",           // ← default ke /pay, bisa diubah ke /selesai
-  payLabel = "Beli Sekarang", // ← label tombol bisa diubah juga
+  payTo = "/pay",
+  payLabel = "Beli Sekarang",
 }) => {
   const subtotal = 767500;
   const adminFee = 7000;
@@ -37,8 +36,8 @@ const Metode = ({
 
         <div className="summary-row">
           <span className="summary-text">
-            Video Learning: Gapai Karier Impianmu sebagai Seorang UI/UX
-            Designer & Product Manager.
+            Video Learning: Gapai Karier Impianmu sebagai Seorang UI/UX Designer
+            & Product Manager.
           </span>
           <span className="summary-price">{formatRupiah(subtotal)}</span>
         </div>

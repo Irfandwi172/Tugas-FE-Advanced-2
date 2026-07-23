@@ -27,7 +27,6 @@
   align-items: flex-start;
 }
 
-/* Sidebar */
 .sidebar {
   width: 366px;
   flex-shrink: 0;
@@ -37,7 +36,6 @@
   border: 1px solid #eee;
 }
 
-/* Konten kanan */
 .kelas-content {
   flex: 1;
   min-width: 0;

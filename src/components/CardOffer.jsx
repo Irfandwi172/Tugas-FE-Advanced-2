@@ -14,13 +14,9 @@ const classInclude = [
   { icon: iconSertifikat, label: "Sertifikat" },
 ];
 
-// showImage = true  → tampilkan gambar (dipakai di Checkout)
-// showImage = false → tanpa gambar (dipakai di Desain/CardOffer)
-// Tambahkan showButton di props, default true (tampil)
 const CardOffer = ({ showImage = false, courseImg, showButton = true }) => {
   return (
     <div className="card-offer">
-
       {showImage && courseImg && (
         <img src={courseImg} alt="Course" className="course-offer-img" />
       )}
@@ -36,9 +32,10 @@ const CardOffer = ({ showImage = false, courseImg, showButton = true }) => {
         <p>Penawaran spesial tersisa 2 hari lagi!</p>
       </div>
 
-      {/* Button hanya tampil kalau showButton true */}
       {showButton && (
-        <NavLink className="btn-offer" to="/checkout">Beli Sekarang</NavLink>
+        <NavLink className="btn-offer" to="/checkout">
+          Beli Sekarang
+        </NavLink>
       )}
 
       <div className="include">

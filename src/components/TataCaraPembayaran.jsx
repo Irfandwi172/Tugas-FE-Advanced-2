@@ -48,7 +48,7 @@ const TataCaraPembayaran = () => {
 
   const toggleSection = (id) => {
     setOpenId((prev) =>
-      prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
+      prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id],
     );
   };
 
@@ -58,13 +58,14 @@ const TataCaraPembayaran = () => {
 
       {instructions.map((section) => (
         <div className="tata-section" key={section.id}>
-
           <button
             className="tata-title"
             onClick={() => toggleSection(section.id)}
           >
             <span>{section.title}</span>
-            <span className={`tata-arrow ${openId.includes(section.id) ? "open" : ""}`}>
+            <span
+              className={`tata-arrow ${openId.includes(section.id) ? "open" : ""}`}
+            >
               ∧
             </span>
           </button>
@@ -76,7 +77,6 @@ const TataCaraPembayaran = () => {
               ))}
             </ol>
           )}
-
         </div>
       ))}
     </div>
