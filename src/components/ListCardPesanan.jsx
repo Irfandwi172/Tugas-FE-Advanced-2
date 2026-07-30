@@ -2,7 +2,7 @@ import { useState } from "react";
 import search from "../assets/search.png";
 import CardListPesanan from "./CardListPesanan";
 import "../style/ListCardPesanan.css";
-import { dummyDataPesanan } from "./data/dummyDataPesanan.js";
+import { dummyDataPesanan } from "./data/DummyDataPesanan.js";
 
 const tabsPesanan = [
   { key: "semua", label: "Semua Pesanan" },

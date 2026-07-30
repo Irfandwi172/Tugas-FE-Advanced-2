@@ -1,4 +1,4 @@
-import fotoKelas from "../../assets/fotoKelas.jpg";
+import fotoKelas from "../../assets/FotoKelas.jpg";
 import fotoInstruktur from "../../assets/orang1.png";
 
 

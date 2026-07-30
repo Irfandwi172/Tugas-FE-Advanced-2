@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../style/KelasSaya.css'
-import iconSearch from '../assets/Search.png'
+import iconSearch from '../assets/search.png'
 import CardKelasSaya from './CardKelasSaya'
 
 const tabs = [
