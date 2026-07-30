@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux"; // ← hook Redux
+import { useSelector, useDispatch } from "react-redux"; 
 import {
   fetchStart,
   fetchSuccess,
@@ -10,7 +10,7 @@ import {
 import {
   getCourses,
   deleteCourse as deleteCourseAPI,
-} from "../services/api/courseService"; // ← fungsi API dari services/api
+} from "../services/api/courseService";
 import CardCollection from "../components/CardCollection";
 import Footer from "../components/Footer";
 import heroBg from "../assets/Belajar-Online.jpg";

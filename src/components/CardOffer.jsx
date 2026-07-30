@@ -1,5 +1,5 @@
 import "../style/CardOffer.css";
-import iconUjian from "../assets/vector.png";
+import iconUjian from "../assets/Vector.png";
 import iconDokumen from "../assets/book-2.png";
 import iconPretest from "../assets/File_Edit.png";
 import iconVideo from "../assets/video.png";
