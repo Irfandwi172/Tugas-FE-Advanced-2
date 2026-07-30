@@ -12,6 +12,7 @@ import Checkout from "../pages/Checkout";
 import Pay from "../pages/Pay";
 import ChangeMethode from "../pages/ChangeMethode";
 import PaymentDone from "../pages/PaymentDone";
+import Pesanan from "../pages/Pesanan";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       { path: "desain", element: <Desain /> },
       { path: "course/add", element: <CourseForm /> },
       { path: "course/edit/:id", element: <CourseForm /> },
+      { path: "pesanan", element: <Pesanan /> },
       { path: "*", element: <Page404 /> },
     ],
   },

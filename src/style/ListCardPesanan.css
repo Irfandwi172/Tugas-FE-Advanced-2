@@ -1,0 +1,72 @@
+.list-card-pesanan {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #3A35411F;
+    max-width: 872px;
+    height: auto;
+}
+.pesanan-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    gap: 20px;
+}
+.category-pesanan{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.filter-pesanan{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.toolbar-right{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.tab-pesanan{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: #888;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-pesanan.active{
+    color: #E8622C;
+    font-weight: 600;
+    border-bottom: 2px solid #E8622C;
+}
+
+.empty-state{
+    text-align: center;
+    color: #888;
+    padding: 40px 0;
+}
+
+@media (max-width: 768px) {
+    .list-card-pesanan{
+        width: 100%;
+    }
+    .pesanan-header{
+        flex-direction: column;
+        gap: 12px;
+    }
+}

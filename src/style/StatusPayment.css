@@ -42,7 +42,7 @@
     text-align: center;
 }
 
-.status-payment button{
+.btn{
     width: 215px;
     height: auto;
     background-color: #3cb843;
@@ -57,7 +57,7 @@
     transition: background-color 0.5s;
 }
 
-.status-payment button:hover{
+.btn:hover{
     background-color: #aed2b1;
 }
 

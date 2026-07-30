@@ -1,0 +1,257 @@
+.kelas-saya {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: white;
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+}
+
+.kelas-saya-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.kelas-tabs {
+  display: flex;
+  gap: 24px;
+}
+
+.kelas-tab {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #888;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.kelas-tab.active {
+  color: #e8622c;
+  font-weight: 600;
+  border-bottom: 2px solid #e8622c;
+}
+
+.kelas-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.kelas-search input {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 10px 40px 10px 14px;
+  font-size: 14px;
+  outline: none;
+  width: 220px;
+}
+
+.kelas-search input:focus {
+  border-color: #e8622c;
+}
+
+.kelas-search img {
+  position: absolute;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.kelas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kelas-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+}
+
+.kelas-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background-color: #effaf0;
+  font-size: 14px;
+  color: #555;
+}
+
+.status-badge {
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.status-selesai {
+  background-color: #d5f5dc;
+  color: #1f9254;
+}
+
+.status-berjalan {
+  background-color: #fff6e0;
+  color: #b7791f;
+}
+
+.kelas-card-body {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+}
+
+.kelas-thumbnail {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.kelas-info h6 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.kelas-info p {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.kelas-instruktur {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.kelas-instruktur img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nama-instruktur {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.jabatan-instruktur {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.kelas-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: #888;
+}
+
+.kelas-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.kelas-meta img {
+  width: 14px;
+  height: 14px;
+}
+
+.kelas-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-top: 1px solid #eee;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.progress-wrapper > span {
+  font-size: 13px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background-color: #fadbd3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #e8622c;
+  border-radius: 10px;
+}
+
+.kelas-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-outline {
+  background: #fff;
+  border: 1px solid #3eb56d;
+  color: #3eb56d;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: #f1fbf4;
+}
+
+.btn-filled {
+  background-color: #3eb56d;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-filled:hover {
+  background-color: #359e5e;
+}
+
+@media (max-width: 768px) {
+  .kelas-card {
+    flex-direction: column;
+  }
+}

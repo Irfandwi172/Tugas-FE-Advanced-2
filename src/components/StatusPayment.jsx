@@ -1,5 +1,6 @@
 import Done from "../assets/paymentDone.png";
 import "../style/StatusPayment.css";
+import { NavLink } from "react-router-dom";
 const StatusPayment = () => {
   return (
     <div className="status-payment">
@@ -9,9 +10,9 @@ const StatusPayment = () => {
         Silakan cek email kamu untuk informasi lebih lanjut. Hubungi kami jika
         ada kendala.
       </p>
-      <button type="button" className="btn btn-primary">
+      <NavLink type="button" className="btn btn-primary" to="/pesanan">
         Lihat Detail Pesanan
-      </button>
+      </NavLink>
     </div>
   );
 };

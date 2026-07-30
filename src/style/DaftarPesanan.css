@@ -1,0 +1,76 @@
+.daftar-pesanan {
+  display: block;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.daftar-pesanan h5 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+  font-style: SemiBold;
+  letter-spacing: 0%;
+}
+
+.daftar-pesanan p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #888;
+  font-style: Regular;
+  letter-spacing: 0%;
+  margin-bottom: 8px;
+}
+
+.card-saya {
+  background-color: #fff;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 8px;
+  border-radius: 10px;
+  border: 1px solid #3a35411f;
+  justify-content: center;
+}
+
+.card-pesanan {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #888;
+  font-style: Bold;
+  letter-spacing: 0.2px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  border: 1px solid #f0f0f0;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.card-pesanan p {
+  margin: 0;
+}
+
+.card-pesanan.active {
+  border: 1px solid #e8a020;
+  background-color: #fff8ec;
+  color: #e8a020;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .daftar-pesanan {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+}

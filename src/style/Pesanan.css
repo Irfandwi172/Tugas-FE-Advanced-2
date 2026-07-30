@@ -1,0 +1,28 @@
+.pesanan-page{
+    display: flex;
+    align-items: flex-start; 
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #3A35411F;
+    justify-content: center;
+}
+
+.daftar-pesanan-page{
+    position: sticky;
+    top: 25px;
+    margin: 0;
+    z-index: 10;
+    align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+    .pesanan-page{
+        flex-direction: column;
+    }
+
+    .daftar-pesanan-page{
+        position: static; 
+        width: 100%;
+        top: unset;
+    }
+}
