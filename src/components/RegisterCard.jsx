@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "../style/registerCard.css";
+import "../style/RegisterCard.css";
 import { NavLink } from "react-router-dom";
 import hide from "../assets/hide.png";
 import show from "../assets/show.png";
-import Button from "./button";
+import Button from "./Button";
 
 const RegisterCard = () => {
   const [showPassword, setShowPassword] = useState(false);
