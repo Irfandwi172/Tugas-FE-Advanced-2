@@ -1,6 +1,6 @@
 import "../style/Card.css";
 import { NavLink } from "react-router-dom";
-import Button from "./button";
+import Button from "./Button";
 import hide from "../assets/hide.png";
 import show from "../assets/show.png";
 import { useState } from "react";

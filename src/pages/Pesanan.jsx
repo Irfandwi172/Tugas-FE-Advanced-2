@@ -5,7 +5,7 @@ import KelasSaya from '../components/KelasSaya'
 import ProfilSaya from '../components/ProfilSaya'
 import Footer from '../components/Footer'
 import '../style/Pesanan.css'
-import { dummyDataKelas } from '../components/data/dummyDataKelas'
+import { dummyDataKelas } from '../components/data/DummyDataKelas'
 import { useState } from 'react'
 
 const Pesanan = () => {
