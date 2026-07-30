@@ -10,7 +10,7 @@ const Button = ({
 }) => {
   return (
     <>
-      <div className="btn">
+      <div className="btnCard">
         <NavLink to={loginTo} className="btn-login">
           {loginLabel}
         </NavLink>

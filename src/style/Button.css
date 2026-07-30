@@ -1,6 +1,7 @@
-.btn {
+.btnCard {
   display: flex;
   flex-direction: column;
+  max-width: 518px;
   width: 100%;
 }
 

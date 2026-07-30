@@ -279,9 +279,7 @@ header {
   background-color: #c8880e;
 }
 
-/* ===== Tambahan CSS — tempel ke bawah file Home.css yang sudah ada ===== */
-
-.collect-header {
+.collectHeader {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

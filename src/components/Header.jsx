@@ -86,15 +86,15 @@ const Header = ({
 
               {dropdownOpen && (
                 <div className="dropdown-menu">
-                  <NavLink to="/profil" className="dropdown-item">
+                  <NavLink to="/pesanan?tab=profil" className="dropdown-item">
                     Profil Saya
                   </NavLink>
 
-                  <NavLink to="/product" className="dropdown-item">
+                  <NavLink to="/pesanan?tab=kelas" className="dropdown-item">
                     Kelas Saya
                   </NavLink>
 
-                  <NavLink to="/pesanan" className="dropdown-item">
+                  <NavLink to="/pesanan?tab=pesanan" className="dropdown-item">
                     Pesanan Saya
                   </NavLink>
 
@@ -156,7 +156,7 @@ const Header = ({
       {(showProfile || showMethod) && mobileMenuOpen && (
         <div className="mobile-menu">
           <NavLink
-            to="#"
+            to="/product"
             className="mobile-menu-item"
             onClick={() => setMobileMenuOpen(false)}
           >
@@ -164,7 +164,7 @@ const Header = ({
           </NavLink>
 
           <NavLink
-            to="/profil"
+            to="/pesanan?tab=profil"
             className="mobile-menu-item"
             onClick={() => setMobileMenuOpen(false)}
           >
@@ -172,7 +172,7 @@ const Header = ({
           </NavLink>
 
           <NavLink
-            to="/product"
+            to="/pesanan?tab=kelas"
             className="mobile-menu-item"
             onClick={() => setMobileMenuOpen(false)}
           >
@@ -180,7 +180,7 @@ const Header = ({
           </NavLink>
 
           <NavLink
-            to="/pesanan"
+            to="/pesanan?tab=pesanan"
             className="mobile-menu-item"
             onClick={() => setMobileMenuOpen(false)}
           >

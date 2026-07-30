@@ -67,10 +67,16 @@
   font-weight: 600;
 }
 
+.card-pesanan img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 @media (max-width: 768px) {
   .daftar-pesanan {
     width: 100%;
     margin: 0 auto;
-    margin-top: 1rem;
   }
 }

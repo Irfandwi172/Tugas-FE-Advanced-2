@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux"; 
+import { useSelector, useDispatch } from "react-redux";
 import {
   fetchStart,
   fetchSuccess,
@@ -68,7 +68,7 @@ const HomePage = () => {
       </section>
 
       <section className="collect" id="koleksi">
-        <div className="collect-header">
+        <div className="collectHeader">
           <div>
             <h3>Koleksi Video Pembelajaran Unggulan</h3>
             <p className="collect-sub">
