@@ -1,7 +1,6 @@
 .daftar-pesanan {
   display: block;
-  margin-top: 2rem;
-  padding: 1rem;
+  padding: 1px;
   border-radius: 10px;
   max-width: 800px;
 }
