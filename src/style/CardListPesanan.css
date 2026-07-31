@@ -4,8 +4,7 @@
     display: flex;
     flex-direction: column;
     max-width: 832px;
-    height: auto;
-    border: 1px solid #E5E5E5;
+    height: auto;   /* WAJIB: potong apapun yang melebihi rounded corner */
 }
 
 .collect-header{
@@ -137,57 +136,67 @@
         width: 100%;
         max-width: 100%;
         border-radius: 12px;
+        overflow: hidden;
+        border: none;
     }
 
     .label-desktop{
         display: none;
     }
 
+    /* --- Header: invoice info + badge jadi 2 baris terpisah --- */
     .collect-header{
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 8px;
-        padding: 16px 20px;
+        padding: 14px 16px;
+        background-color: #EFFAF0;
+        height: auto;
     }
 
     .invoice-info{
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        gap: 8px 12px;
+        gap: 4px 8px;
         align-items: baseline;
         font-size: 13px;
         color: #666;
-        flex: 1 1 100%;
         order: 1;
-    }
-
-    .status-badge{
-        order: 2;       
-        flex-shrink: 0;
+        min-width: 0;
     }
 
     .invoice-link{
         font-size: 14px;
     }
 
+    .status-badge{
+        order: 2;
+        align-self: flex-start;
+        flex-shrink: 0;
+        
+    }
+
+    /* --- Main: gambar di atas, judul di bawah (vertikal) --- */
     .collect-main{
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: flex-start;
-        padding: 16px 20px;
+        padding: 16px;
+        gap: 10px;
+        background-color: #fff;
     }
 
     .collect-main img{
-        width: 44px;
-        height: 44px;
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
     }
 
     .collect-main p{
-        flex: 1;
-        min-width: 0;
+        flex: none;
+        width: 100%;
         font-size: 15px;
+        line-height: 1.4;
     }
 
     .devider-pesanan{
@@ -197,12 +206,20 @@
     .harga-pesanan{
         flex-basis: 100%;
         align-items: flex-start;
-        margin-top: 4px;
+        margin-top: 0;
+        gap: 2px;
     }
 
+    /* --- Footer: total pembayaran, background putih + garis atas --- */
     .collect-footer{
         width: 100%;
         max-width: 100%;
-        padding: 14px 20px;
+        padding: 14px 16px;
+        background-color: #fff;
+        border-top: 1px solid #EEE;
+    }
+
+    .total-pesanan{
+        font-size: 16px;
     }
 }

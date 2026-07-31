@@ -20,6 +20,10 @@
     display: flex;
     gap: 24px;
     align-items: center;
+    flex-wrap: nowrap;
+}
+.sort-select{
+    max-width: 50px;
 }
 
 .filter-pesanan{
@@ -32,7 +36,7 @@
 
 .toolbar-right{
     display: flex;
-    gap: 12px;
+    gap: 5px;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -60,13 +64,62 @@
     color: #888;
     padding: 40px 0;
 }
+.search-box{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    padding: 8px;
+    margin: 0;
+    max-width: 350px;
+    flex-wrap: wrap;
+}
+
+.search-box img{
+    width: 10px;
+    height: 10px;
+}
 
 @media (max-width: 768px) {
     .list-card-pesanan{
         width: 100%;
+        box-sizing: border-box;
+        padding: 16px;
     }
+
     .pesanan-header{
         flex-direction: column;
+        align-items: stretch;
         gap: 12px;
+    }
+
+    .category-pesanan{
+        flex-wrap: wrap;
+        gap: 16px;
+        row-gap: 8px;
+    }
+
+    .tab-pesanan{
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+    .filter-pesanan{
+        width: 100%;
+    }
+
+    .toolbar-right{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .sort-select{
+        flex: 1;
+        min-width: 100px;
+    }
+
+    .search-box{
+        flex: 2;
+        min-width: 140px;
     }
 }

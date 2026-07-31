@@ -26,9 +26,15 @@ const CardOffer = ({ showImage = false, courseImg, showButton = true }) => {
       </h3>
 
       <div className="offer-price">
-        <h4>Rp 250K</h4>
-        <span className="normalPrice">Rp 500K</span>
-        <span className="discount">Diskon 50%</span>
+        <div className="harga">
+          <div className="harga-sekarang">
+            <h4>Rp 250K</h4>
+            <span className="normalPrice">Rp 500K</span>
+          </div>
+          <div className="promo">
+            <span className="discount">Diskon 50%</span>
+          </div>
+        </div>
         <p>Penawaran spesial tersisa 2 hari lagi!</p>
       </div>
 

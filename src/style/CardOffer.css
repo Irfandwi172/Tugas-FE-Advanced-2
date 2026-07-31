@@ -34,20 +34,50 @@
     color: #0980E2;
     font-weight: 600;
 }
+
+.harga{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    gap: 12px;
+}
+
+.harga-sekarang{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.harga-sekarang h4{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.promo{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
 .normalPrice{
     text-decoration: line-through;
     color: #888;
-    font-size: 14px;
-    margin-right: 116px;
+    font-size: 13px;
+    margin: 0;
 }
 
 .discount{
     background-color: #FFBD3A;
     color: #fff;
-    padding: 2px 6px;
+    padding: 2px 8px;
     border-radius: 10px;
     font-size: 12px;
-    margin : 0;
+    margin: 0;
+    white-space: nowrap;
 }
 
 .btn-offer{
@@ -133,6 +163,9 @@
         
     }
     .btn-offer{
+        width: 100%;
+    }
+    .harga{
         width: 100%;
     }
 }
