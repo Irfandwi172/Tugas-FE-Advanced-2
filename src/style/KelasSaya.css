@@ -6,6 +6,7 @@
   padding: 24px;
   border-radius: 10px;
   border: 1px solid #e5e5e5;
+
 }
 
 .kelas-saya-topbar {
@@ -187,6 +188,23 @@
   flex-wrap: wrap;
 }
 
+ .kelas-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 300px;
+  }
+
+  .kelas-search input{
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 10px 40px 10px 14px;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+  }
+
 .progress-wrapper {
   display: flex;
   align-items: center;
@@ -253,5 +271,37 @@
 @media (max-width: 768px) {
   .kelas-card {
     flex-direction: column;
+  }
+
+  .kelas-saya {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .kelas-saya-topbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .kelas-tabs {
+    gap: 16px;
+    overflow-x: auto;      /* kalau masih sempit, bisa di-scroll horizontal */
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .kelas-tab {
+    white-space: nowrap;   /* WAJIB: cegah teks tab pecah baris */
+    flex-shrink: 0;        /* cegah tombol ikut menyusut */
+    font-size: 14px;
+  }
+
+  .kelas-search {
+    width: 100%;           /* override fixed 300px */
+  }
+
+  .kelas-search input {
+    width: 100%;
   }
 }

@@ -2,7 +2,6 @@ import useFetchCourses from "../hooks/useFetchCourses"; // ← tambahkan ini
 import Filter from "../components/Filter";
 import CardCollection from "../components/CardCollection";
 import "../style/Kelas.css";
-import "../style/Filter.css";
 import Footer from "../components/Footer";
 import Pagination from "../components/Pagination";
 import search from "../assets/search.png";
@@ -23,8 +22,8 @@ const Product = () => {
             <Filter />
           </aside>
           <div className="kelas-content">
-            <div className="toolbar-right">
-              <select className="sort-select">
+            <div className="toolbar-right-product">
+              <select className="sort-select-product">
                 <option value="">Urutkan</option>
                 <option value="harga-rendah">Harga Rendah</option>
                 <option value="harga-tinggi">Harga Tinggi</option>
@@ -33,7 +32,7 @@ const Product = () => {
                 <option value="rating-tinggi">Rating Tertinggi</option>
                 <option value="rating-rendah">Rating Terendah</option>
               </select>
-              <div className="search-box">
+              <div className="search-box-product">
                 <input type="text" placeholder="Cari Kelas" />
                 <span>
                   <img src={search} />
